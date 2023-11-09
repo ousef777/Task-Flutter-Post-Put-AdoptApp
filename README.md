@@ -5,11 +5,11 @@ If you need a starting point, fork and clone [this](https://github.com/JoinCODED
 - Endpoints:
 
 ```
-Get pets, type: Get, https://coded-pets-api-crud.herokuapp.com/pets
-Create a new pet, type: Post, https://coded-pets-api-crud.herokuapp.com/pets
-Update a pet, type: Put, https://coded-pets-api-crud.herokuapp.com/pets/{petId}
-Delete a pet, type: Delete, https://coded-pets-api-crud.herokuapp.com/pets/{petId}
-Adopt a pet, type: Post, https://coded-pets-api-crud.herokuapp.com/pets/{petId}
+Get pets, type: Get, https://coded-pets-api-crud.eapi.joincoded.com/pets
+Create a new pet, type: Post, https://coded-pets-api-crud.eapi.joincoded.com/pets
+Update a pet, type: Put, https://coded-pets-api-crud.eapi.joincoded.com/pets/{petId}
+Delete a pet, type: Delete, https://coded-pets-api-crud.eapi.joincoded.com/pets/{petId}
+Adopt a pet, type: Post, https://coded-pets-api-crud.eapi.joincoded.com/pets/{petId}
 ```
 
 ### Part 2: Post Data
@@ -55,7 +55,7 @@ flutter pub add image_picker
 25. Create a request of type post to your endpoint and pass it the `data` variable we created:
 
 ```
-Post, https://coded-pets-api-crud.herokuapp.com/pets
+Post, https://coded-pets-api-crud.eapi.joincoded.com/pets
 ```
 
 26. Assign the `late` variable we created to the response, and return that variable.
@@ -84,7 +84,7 @@ Post, https://coded-pets-api-crud.herokuapp.com/pets
 8. Your endpoint is:
 
 ```
-Put, https://coded-pets-api-crud.herokuapp.com/pets/{petId}
+Put, https://coded-pets-api-crud.eapi.joincoded.com/pets/{petId}
 ```
 
 9. Using string interpolation, inject the `pet.id` value within the url, and pass the `data` as a second argument.
