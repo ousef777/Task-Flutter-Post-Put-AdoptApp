@@ -1,0 +1,36 @@
+{
+    "pets": [
+        {
+            "name": "Cleocatra",
+            "adopted": false,
+            "image": "https://i.ibb.co/HBRR9sp/cat-kitty-1.png",
+            "age": 1,
+            "gender": "female",
+            "id": 1
+        },
+        {
+            "id": 2,
+            "name": "Subwoofer",
+            "adopted": false,
+            "image": "https://i.ibb.co/C0rwwRn/pet-dog-1.png",
+            "age": 2,
+            "gender": "male"
+        },
+        {
+            "id": 3,
+            "name": "SSSSSam",
+            "adopted": false,
+            "image": "https://pbs.twimg.com/profile_images/697135903135797248/UcOjql3O_400x400.jpg",
+            "age": 3,
+            "gender": "female"
+        },
+        {
+            "name": "Biscuits",
+            "age": 10,
+            "gender": "male",
+            "image": "https://i.imgur.com/AL0stZm_d.webp?maxwidth=760&fidelity=grand",
+            "adopted": false,
+            "id": 4
+        }
+    ]
+}

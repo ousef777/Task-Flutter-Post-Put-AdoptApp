@@ -20,45 +20,43 @@ class PetCard extends StatelessWidget {
               width: double.infinity,
             ),
           ),
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  Text(pet.name),
-                  Text("Age: ${pet.age}"),
-                  Text("Gender: ${pet.gender}"),
-                  ElevatedButton(
-                    onPressed: pet.adopted
-                        ? null
-                        : () {
-                            Provider.of<PetsProvider>(context, listen: false)
-                                .adoptPet(pet.id!);
-                          },
-                    child: const Text("Adopt"),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      IconButton(
-                          onPressed: () {
-                            GoRouter.of(context).push('/update/${pet.id}');
-                          },
-                          icon: const Icon(Icons.edit)),
-                      IconButton(
-                          onPressed: () {
-                            Provider.of<PetsProvider>(context, listen: false)
-                                .deletePet(pet.id!);
-                          },
-                          icon: const Icon(
-                            Icons.delete,
-                            color: Colors.red,
-                          ))
-                    ],
-                  ),
-                ],
-              ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Text(pet.name),
+                Text("Age: ${pet.age}"),
+                Text("Gender: ${pet.gender}"),
+                ElevatedButton(
+                  onPressed: pet.adopted
+                      ? null
+                      : () {
+                          Provider.of<PetsProvider>(context, listen: false)
+                              .adoptPet(pet.id!);
+                        },
+                  child: const Text("Adopt"),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    IconButton(
+                        onPressed: () {
+                          GoRouter.of(context).push('/update_page/${pet.id}');
+                        },
+                        icon: const Icon(Icons.edit)),
+                    IconButton(
+                        onPressed: () {
+                          Provider.of<PetsProvider>(context, listen: false)
+                              .deletePet(pet.id!);
+                        },
+                        icon: const Icon(
+                          Icons.delete,
+                          color: Colors.red,
+                        ))
+                  ],
+                ),
+              ],
             ),
           )
         ],

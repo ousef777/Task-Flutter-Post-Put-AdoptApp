@@ -20,7 +20,9 @@ class HomePage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  GoRouter.of(context).push('/add_page');
+                },
                 child: const Padding(
                   padding: EdgeInsets.all(12.0),
                   child: Text("Add a new Pet"),
@@ -37,8 +39,8 @@ class HomePage extends StatelessWidget {
                   );
                 } else {
                   if (dataSnapshot.error != null) {
-                    return const Center(
-                      child: Text('An error occurred'),
+                    return Center(
+                      child: Text(dataSnapshot.error.toString()),
                     );
                   } else {
                     return Consumer<PetsProvider>(

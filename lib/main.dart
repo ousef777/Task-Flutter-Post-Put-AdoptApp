@@ -1,4 +1,6 @@
+import 'package:adopt_app/pages/add_page.dart';
 import 'package:adopt_app/pages/home_page.dart';
+import 'package:adopt_app/pages/update_page.dart';
 import 'package:adopt_app/providers/pets_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -18,8 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      routeInformationParser: _router.routeInformationParser,
-      routerDelegate: _router.routerDelegate,
+      routerConfig: _router,
     );
   }
 
@@ -28,6 +29,17 @@ class MyApp extends StatelessWidget {
       GoRoute(
         path: '/',
         builder: (context, state) => const HomePage(),
+      ),
+      GoRoute(
+        path: '/add_page',
+        builder: (context, state) => AddPage(),
+      ),
+      GoRoute(
+        path: '/update_page/:petId',
+        builder: (context, state) {
+          final pet = Provider.of<PetsProvider>(context).pets.firstWhere((element) => element.id.toString() == state.pathParameters['petId']);
+          return UpdatePage(pet: pet,);
+        },
       ),
     ],
   );
